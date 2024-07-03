@@ -2,6 +2,7 @@ using DiscGoAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Http.Json;
+using DiscGoAPI.API;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -47,6 +48,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
 
+BagAPI.Map(app);
 
 app.Run();
 
