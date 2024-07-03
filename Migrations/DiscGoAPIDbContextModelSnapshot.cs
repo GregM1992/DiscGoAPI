@@ -66,6 +66,9 @@ namespace DiscGoAPI.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("Aces")
+                        .HasColumnType("integer");
+
                     b.Property<int>("BagId")
                         .HasColumnType("integer");
 
@@ -107,6 +110,7 @@ namespace DiscGoAPI.Migrations
                         new
                         {
                             Id = 2,
+                            Aces = 2,
                             BagId = 1,
                             Birdies = 3,
                             Brand = "axiom",

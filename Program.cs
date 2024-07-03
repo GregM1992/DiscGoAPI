@@ -49,6 +49,7 @@ app.UseAuthorization();
 app.MapControllers();
 
 BagAPI.Map(app);
+BaggedDiscAPI.Map(app);
 
 app.Run();
 
