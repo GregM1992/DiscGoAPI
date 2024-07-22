@@ -50,6 +50,7 @@ app.MapControllers();
 
 BagAPI.Map(app);
 BaggedDiscAPI.Map(app);
+UserAPI.Map(app);
 
 app.Run();
 

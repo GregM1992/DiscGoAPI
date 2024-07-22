@@ -8,7 +8,7 @@ namespace DiscGoAPI.API
         {
             app.MapGet("/baggedDiscs/{bagId}", (DiscGoAPIDbContext db, int bagId) =>
             {
-                var baggedDiscs = db.BaggedDiscs.Where(d => d.BagId == bagId);
+                var baggedDiscs = db.BaggedDiscs.Where(d => d.BagId == bagId).ToList();
                 if (baggedDiscs.Any())
                 {
                     return Results.Ok(baggedDiscs);
@@ -19,7 +19,7 @@ namespace DiscGoAPI.API
                 }
             });
 
-            app.MapGet("/baggedDiscs/discInfo", (DiscGoAPIDbContext db, int Id) =>
+            app.MapGet("/baggedDiscs/discInfo/{Id}", (DiscGoAPIDbContext db, int Id) =>
             {
                 var singleDisc = db.BaggedDiscs.FirstOrDefault(d => d.Id == Id);
                 if (singleDisc != null)
