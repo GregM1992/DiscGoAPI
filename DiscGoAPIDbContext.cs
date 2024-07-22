@@ -26,7 +26,7 @@ public class DiscGoAPIDbContext : DbContext
         new User {Id = 1, Email = "myEmail.com", UserId = "OTSAVyBcQ5R8N7OeGx6sHDr4RV53", UserName = "discGuy32" },
         });
         modelBuilder.Entity<BaggedDisc>().HasData(new BaggedDisc[] {
-            new BaggedDisc { Id = 2, BagId = 1, Aces = 2, Birdies = 3, Brand = "axiom", Category = "putter", Color = "#343403", Fade = 3, Glide = 3, Name = "roc", Speed = 3, Stability = "over-stable", Turn = 3 },
+            new BaggedDisc { Id = 2, DiscId = "hdye73-hfuye=3jdfuj", BagId = 1, Aces = 2, Birdies = 3, Brand = "axiom", Category = "putter", Color = "#343403", Fade = 3, Glide = 3, Name = "roc", Speed = 3, Stability = "over-stable", Turn = 3, Favorite = true },
         });
 
     }
