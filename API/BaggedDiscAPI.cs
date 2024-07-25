@@ -38,9 +38,9 @@ namespace DiscGoAPI.API
                 return Results.Created($"/baggedDiscs/{discToAdd.Id}", discToAdd);
             });
 
-            app.MapPut("/baggedDiscs/{baggedDiscId}", (DiscGoAPIDbContext db, int baggedDiscId, BaggedDisc updatedDisc) =>
+            app.MapPut("/baggedDiscs/{baggedDiscId}", (DiscGoAPIDbContext db, string baggedDiscId, BaggedDisc updatedDisc) =>
             {
-                var discToUpdate = db.BaggedDiscs.FirstOrDefault(d => d.Id == baggedDiscId);
+                var discToUpdate = db.BaggedDiscs.FirstOrDefault(d => d.DiscId == baggedDiscId);
                 if (discToUpdate != null)
                 {
                     discToUpdate.Birdies = updatedDisc.Birdies;
