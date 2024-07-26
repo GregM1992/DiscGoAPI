@@ -19,5 +19,6 @@
         public string? Background_color { get; set; }
         public bool? Favorite { get; set; }
         public string? Pic { get; set; }
+        public int LongestThrow { get; set; }
     }
 }

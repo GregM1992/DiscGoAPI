@@ -101,6 +101,9 @@ namespace DiscGoAPI.Migrations
                     b.Property<string>("Glide")
                         .HasColumnType("text");
 
+                    b.Property<int>("LongestThrow")
+                        .HasColumnType("integer");
+
                     b.Property<string>("Name")
                         .HasColumnType("text");
 
@@ -135,6 +138,7 @@ namespace DiscGoAPI.Migrations
                             Fade = "3",
                             Favorite = true,
                             Glide = "3",
+                            LongestThrow = 375,
                             Name = "roc",
                             Pic = "fakeUrl",
                             Speed = "3",
