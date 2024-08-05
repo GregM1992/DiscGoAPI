@@ -10,12 +10,15 @@
         public string? Brand { get; set; }
         public string? Category { get; set; }
         public string? Color { get; set; }
-        public int Fade { get; set; }
-        public int Glide { get; set; }
+        public string? Fade { get; set; }
+        public string? Glide { get; set; }
         public string? Name { get; set; }
-        public int Speed { get; set; }
+        public string? Speed { get; set; }
         public string? Stability { get; set; }
-        public int Turn { get; set; }
+        public string? Turn { get; set; }
+        public string? Background_color { get; set; }
         public bool? Favorite { get; set; }
+        public string? Pic { get; set; }
+        public int LongestThrow { get; set; }
     }
 }

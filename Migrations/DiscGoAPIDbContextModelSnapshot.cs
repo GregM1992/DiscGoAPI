@@ -70,6 +70,9 @@ namespace DiscGoAPI.Migrations
                     b.Property<int>("Aces")
                         .HasColumnType("integer");
 
+                    b.Property<string>("Background_color")
+                        .HasColumnType("text");
+
                     b.Property<int>("BagId")
                         .HasColumnType("integer");
 
@@ -89,26 +92,32 @@ namespace DiscGoAPI.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("Fade")
-                        .HasColumnType("integer");
+                    b.Property<string>("Fade")
+                        .HasColumnType("text");
 
                     b.Property<bool?>("Favorite")
                         .HasColumnType("boolean");
 
-                    b.Property<int>("Glide")
+                    b.Property<string>("Glide")
+                        .HasColumnType("text");
+
+                    b.Property<int>("LongestThrow")
                         .HasColumnType("integer");
 
                     b.Property<string>("Name")
                         .HasColumnType("text");
 
-                    b.Property<int>("Speed")
-                        .HasColumnType("integer");
+                    b.Property<string>("Pic")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Speed")
+                        .HasColumnType("text");
 
                     b.Property<string>("Stability")
                         .HasColumnType("text");
 
-                    b.Property<int>("Turn")
-                        .HasColumnType("integer");
+                    b.Property<string>("Turn")
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
@@ -119,19 +128,22 @@ namespace DiscGoAPI.Migrations
                         {
                             Id = 2,
                             Aces = 2,
+                            Background_color = "#34532",
                             BagId = 1,
                             Birdies = 3,
                             Brand = "axiom",
                             Category = "putter",
                             Color = "#343403",
                             DiscId = "hdye73-hfuye=3jdfuj",
-                            Fade = 3,
+                            Fade = "3",
                             Favorite = true,
-                            Glide = 3,
+                            Glide = "3",
+                            LongestThrow = 375,
                             Name = "roc",
-                            Speed = 3,
+                            Pic = "fakeUrl",
+                            Speed = "3",
                             Stability = "over-stable",
-                            Turn = 3
+                            Turn = "3"
                         });
                 });
 

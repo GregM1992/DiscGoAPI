@@ -38,13 +38,16 @@ namespace DiscGoAPI.API
                 return Results.Created($"/baggedDiscs/{discToAdd.Id}", discToAdd);
             });
 
-            app.MapPut("/baggedDiscs/{baggedDiscId}", (DiscGoAPIDbContext db, int baggedDiscId, BaggedDisc updatedDisc) =>
+
+            app.MapPut("/baggedDiscs/{baggedDiscId}", (DiscGoAPIDbContext db, int baggedDiscId, BaggedDiscDTO updatedDisc) =>
             {
                 var discToUpdate = db.BaggedDiscs.FirstOrDefault(d => d.Id == baggedDiscId);
                 if (discToUpdate != null)
                 {
-                    discToUpdate.Birdies = updatedDisc.Birdies;
                     discToUpdate.Aces = updatedDisc.Aces;
+                    discToUpdate.Birdies = updatedDisc.Birdies;
+                    discToUpdate.Favorite = updatedDisc.Favorite;
+                    discToUpdate.LongestThrow = updatedDisc.LongestThrow;
                     db.SaveChanges();
                     return Results.Created($"/baggedDiscs/{discToUpdate.Id}", updatedDisc);
                 }
